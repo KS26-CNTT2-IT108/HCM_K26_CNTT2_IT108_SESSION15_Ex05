@@ -1,0 +1,25 @@
+SESSION15
+Bài 5 : Xây dựng hệ thống cộng tác đám mây cho doanh nghiệp
+
+Tên lớp: HCM K26 CNTT2
+Môn học: Nhập môn công nghệ thông tin
+Họ và tên: LƯƠNG THANH THƯ
+
+
+Phần 1: Thiết kế kiến trúc
+Sơ đồ luồng dữ liệu:
+
+LOCAL (Ctrl+S) --> AUTO SYNC (chờ dấu tích xanh) --> CLOUD (Version History + Thùng rác)
+                                                          |
+                          Hà Nội, Đà Nẵng, TP.HCM <-------+
+
+Thư mục Cloud: 01_Code (node_modules không sync), 02_Docs, 03_Design_Assets, 04_Marketing, 05_HR_Private (chỉ Trưởng nhóm và HR), 99_Archive.
+Channel: #thong-bao, #ky-thuat, #thiet-ke, #marketing, #hoi-dap, #tan-gau.
+Phân quyền: luôn Restricted, quyền tối thiểu, tắt “Editors can change permissions and share”, chủ sở hữu là tài khoản công ty.
+Transfer Ownership: trước khi trưởng phòng rời nhóm, vào Share, chọn người kế nhiệm, chọn Transfer ownership, người nhận chấp nhận, sau đó thu hồi quyền của người rời.
+Edge case xóa sạch thư mục: khôi phục được từ Thùng rác (Restore), Version History hoặc bản sao trên máy Local. Thời gian giữ tùy dịch vụ nên cần khôi phục sớm.
+
+Phần 2: Bản quy ước văn hóa
+Quy tắc 1, tránh No-Hello Trap: nhắn một lần đủ việc cần gì, đã thử gì, hạn chót khi nào.
+Quy tắc 2, không spam @all: chỉ tag đích danh người cần xử lý, thông báo chung đăng ở #thong-bao.
+Quy tắc 3, tôn trọng giờ nghỉ: tin ngoài giờ dùng Schedule Send hẹn 8h sáng hôm sau, trả lời trong Thread.
